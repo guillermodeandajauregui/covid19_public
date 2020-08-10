@@ -27,8 +27,8 @@ el_data <- vroom::vroom(el_file)
 unlink(temp)
 rm(temp, el_file)
 
-claves_estados    <- vroom::vroom("data/claves_estados.txt")
-claves_municipios <- vroom::vroom("data/claves_municipios.txt")
+claves_estados    <- vroom::vroom("https://raw.githubusercontent.com/guillermodeandajauregui/covid19_public/master/claves_estados.txt")
+claves_municipios <- vroom::vroom("https://raw.githubusercontent.com/guillermodeandajauregui/covid19_public/master/claves_municipios.txt")
 
 ###############################################################################
 #Funcion plots monitoras ----
