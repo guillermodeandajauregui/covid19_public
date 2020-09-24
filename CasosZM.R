@@ -22,7 +22,7 @@ temp <- tempfile()
 download.file(url = el_path, destfile = temp)
 el_file <- unzip(zipfile = temp, list = T)
 el_file <- unz(description = temp, filename = el_file[1])
-el_data <- vroom::vroom(el_file)
+datos_gobmx <- vroom::vroom(el_file)
 unlink(temp)
 rm(temp, el_file)
 
@@ -37,7 +37,7 @@ datos_metropolis <- vroom::vroom("https://raw.githubusercontent.com/coronamex/da
 ###############################################################################
 
 carga_casos <- 
-el_data %>% 
+datos_gobmx %>% 
   #limit to confirmed
   filter(RESULTADO=="1") %>% 
   #some selects to better handle data
