@@ -26,9 +26,6 @@ datos_gobmx <- vroom::vroom(el_file)
 unlink(temp)
 rm(temp, el_file)
 
-claves_estados    <- vroom::vroom("https://raw.githubusercontent.com/guillermodeandajauregui/covid19_public/master/claves_estados.txt")
-claves_municipios <- vroom::vroom("https://raw.githubusercontent.com/guillermodeandajauregui/covid19_public/master/claves_municipios.txt")
-
 #zonas metropolitanas, definidas de https://www.gob.mx/conapo/documentos/delimitacion-de-las-zonas-metropolitanas-de-mexico-2015
 datos_metropolis <- vroom::vroom("https://raw.githubusercontent.com/coronamex/datos/master/util/zonas_metropolitanas_2015.csv")
 
